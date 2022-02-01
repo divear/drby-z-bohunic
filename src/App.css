@@ -1,38 +1,36 @@
-.App {
-  text-align: center;
+@font-face {
+    font-family: "Inter";
+    src: url("./components/fonts/Inter-VariableFont_slnt\,wght.ttf") format("truetype");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+body{
+    background-color: rgb(22, 21, 32);
+    color: rgb(224, 239, 243);
+    font-family: "Inter", sans-serif 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
+.header{
+    margin: 1vw;
+    height: 10rem;
+    background-image: url("./components/imgs/bohunice.jpg");
+    background-repeat:no-repeat;
+    background-position: center center;
+}  
+.headerText{
+    text-align: center;
+    color: black;
+    font-size: 4rem;
+    text-shadow: rgb(225, 241, 247) 2px 2px;
+    padding: 2vw;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.headerText > p {
+    font-size: 1.1rem;
+    text-shadow: none;
+    color: white;
+} 
+.content{
+    margin: 0 15vw;
 }
