@@ -2,15 +2,18 @@
     font-family: "Inter";
     src: url("./components/fonts/Inter-VariableFont_slnt\,wght.ttf") format("truetype");
 }
-
-
-body{
-    background-color: #050508;
-    color: rgb(224, 239, 243);
-    font-family: "Inter", sans-serif 
+:root{
+    --bg: #e0eff3;
+    --fr: #050508;
+    --back: #505099;
 }
 
+body{
+    background-color: var(--bg);
+    color: var(--fr);
+    font-family: "Inter", sans-serif 
 
+}
 
 .header{
     margin: 1vw;
@@ -39,4 +42,14 @@ body{
 } 
 .content{
     margin: 0 15vw;
+}
+.drb{
+    /* background-color: var(--back); */
+    border: 1px var(--fr) solid;
+    margin: 1vw;
+    padding: 0.4vw;
+    border-radius: 1vw;
+}
+.drb:hover{
+    background-color: var(--back);
 }

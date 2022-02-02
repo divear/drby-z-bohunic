@@ -1,9 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 function Home() {
+    const serverDomain = process.env.REACT_APP_SERVERDOMAIN
+    console.log(serverDomain);
+    const [data, setData] = useState([])
+
+
+    useEffect(() => {
+        async function getBlogs() {
+            try {
+                const response = await fetch(serverDomain + "drby");
+                const jsonData = await response.json();
+                setData(jsonData.reverse());
+                console.log(jsonData);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        getBlogs();
+    }, [])
+
     return <div>
         <title>Drby z bohunic</title>
         <h2>Nejnovější drby:</h2>
+        {data[0] ? data.map((d) => {
+            return (
+                <div title={`Zpráva ${d.id}`} onClick={() => window.location = `/drby/${d.id}`} key={d.id} className="drb">
+                    <h5 className={d.username === localStorage.getItem("username") ? "me" : ""}><i>{d.username}</i></h5>
+                    <h4>{d.body}</h4>
+
+                </div>
+            )
+        }) : "Načítání"}
     </div>;
 }
 
