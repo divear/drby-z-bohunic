@@ -3,19 +3,36 @@
     src: url("./components/fonts/Inter-VariableFont_slnt\,wght.ttf") format("truetype");
 }
 :root{
-    --bg: #e0eff3;
-    --fr: #050508;
-    --back: #505099;
+    --bg: #050508;
+    --fr: #c8daee;
+    --back: #3d4c5f;
+    --border:2px var(--fr) solid;
 }
 
 body{
     background-color: var(--bg);
     color: var(--fr);
-    font-family: "Inter", sans-serif 
+}
+*{
+    font-family: "Inter", sans-serif
+}
+label{
+    font-size: 1.5rem;
+}
 
+button{
+    background-color: var(--back);
+    float: right;
+    color: var(--fr);
+    margin: -2vw 0;
+    font-size: 1.5rem;
+    border: var(--border);
+    border-radius: 0.4vw;
+    cursor: pointer;
 }
 
 .header{
+    cursor: pointer;
     margin: 1vw;
     height: 10rem;
     background:
@@ -45,11 +62,42 @@ body{
 }
 .drb{
     /* background-color: var(--back); */
-    border: 1px var(--fr) solid;
+    border: 1px var(--back) solid;
     margin: 1vw;
     padding: 0.4vw;
     border-radius: 1vw;
+    background-color: var(--back);
+    color: var(--fr);
 }
 .drb:hover{
-    background-color: var(--back);
+    border: 2px var(--fr) solid;
+    animation-name: lighten;
+    animation-duration: 1s;
+    background-color: hsl(214, 22%, 25%);
+
+}
+@keyframes lighten {
+    from {
+        background-color: var(--back);
+    }
+    to {
+        background-color: hsl(214, 22%, 25%);
+    }
+}
+
+.novaZprava{
+    text-align: center;
+}
+.username{
+    font-size: 2rem;
+    width:  clamp(20vw, 50%, 100%);
+
+}
+.zprava{
+    margin: 2vw;
+}
+#body{
+    width:  clamp(20vw, 95%, 100%);
+    height: 20vw;
+    font-size: 2rem;
 }
