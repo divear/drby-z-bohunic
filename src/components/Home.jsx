@@ -23,11 +23,11 @@ function Home() {
     return <div>
         <title>Drby z bohunic</title>
         <h2>Nejnovější drby:</h2>
-        <button onClick={() => window.location = "/nova"}>Napsat novou zprávu</button>
+        <button className='new' onClick={() => window.location = "/nova"}>Napsat novou zprávu</button>
         {data[0] ? data.map((d) => {
             return (
                 <div title={`Zpráva ${d.id}`} key={d.id} className="drb">
-                    <h5 className={d.username === localStorage.getItem("username") ? "me" : ""}><i>{d.username}</i></h5>
+                    <h5><i>{d.username || "Anonym"}</i></h5>
                     <h1>{d.body}</h1>
 
                 </div>
