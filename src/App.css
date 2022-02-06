@@ -35,7 +35,6 @@ button{
 }
 
 .header{
-    cursor: pointer;
     margin: 1vw;
     height: 10rem;
     background:
@@ -111,4 +110,30 @@ button{
 }
 .no{
     display: none;
+}
+/* tablety */
+@media only screen and (max-width: 830px) {
+    .content{
+        margin: 0 1vw;
+    }
+}
+
+
+/* mobily */
+@media only screen and (max-width: 522px) {
+
+    .headerText > p {
+        display: none;
+    }
+    .novaZprava{
+        margin: 20vw 0;
+    }
+    #username{
+        width: 85vw;
+    }
+    #body{
+        height: 30vh;
+    }
+
+
 }
