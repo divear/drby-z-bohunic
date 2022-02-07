@@ -20,7 +20,6 @@ function NovaZprava() {
         }
 
 
-
         (async function () {
 
             // removes any emojis from the string
@@ -40,16 +39,9 @@ function NovaZprava() {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(arr)
             })
-            console.log(response);
             window.location = "/"
         })();
-
-
-
     }
-
-
-
 
     return <div>
         <title>Nová zpráva</title>

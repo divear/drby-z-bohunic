@@ -20,6 +20,12 @@ body{
 label{
     font-size: 1.5rem;
 }
+a{
+    color: var(--red);
+}
+a:hover{
+    color: #3d4c5f  ;
+}
 
 button{
     background-color: var(--back);
@@ -117,7 +123,12 @@ button{
     right: 1vw;
     font-size: 8rem;
 }
-
+.floatRight{
+    float: right;
+}
+.floatLeft{
+    float: left;
+}
 
 
 /* tablety */

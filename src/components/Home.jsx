@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 
 function Home() {
     const serverDomain = process.env.REACT_APP_SERVERDOMAIN
-    console.log(window.scrollY);
     const [data, setData] = useState([]);
 
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -18,7 +17,6 @@ function Home() {
                 const response = await fetch(serverDomain + "drby");
                 const jsonData = await response.json();
                 setData(jsonData.reverse());
-                console.log(jsonData);
             } catch (error) {
                 console.log(error);
             }
@@ -44,10 +42,13 @@ function Home() {
 
                 </div>
             )
-        }) : "Načítání..."}
+        }) : <h1>Načítání...</h1>}
 
         <button onClick={() => window.scrollTo(0, 0)} style={{ opacity: `${scrollPosition / 10}%` }} className='goTopButton'>^</button>
-
+        <footer>
+            <p className='floatLeft'>Made by Lukáš Odehnal</p>
+            <a className='floatRight' href="/feedback">feedback</a>
+        </footer>
     </div>;
 }
 
