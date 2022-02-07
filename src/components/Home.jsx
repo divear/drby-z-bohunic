@@ -2,8 +2,14 @@ import React, { useEffect, useState } from 'react';
 
 function Home() {
     const serverDomain = process.env.REACT_APP_SERVERDOMAIN
-    console.log(serverDomain);
+    console.log(window.scrollY);
     const [data, setData] = useState([])
+
+    const [scrollPosition, setScrollPosition] = useState(0);
+    const handleScroll = () => {
+        const position = window.scrollY;
+        setScrollPosition(position);
+    }
 
 
     useEffect(() => {
@@ -18,6 +24,12 @@ function Home() {
             }
         }
         getBlogs();
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
     }, [])
 
     return <div>
@@ -33,6 +45,9 @@ function Home() {
                 </div>
             )
         }) : "Načítání..."}
+
+        <button onClick={() => window.scrollTo(0, 0)} style={{ opacity: `${scrollPosition / 10}%` }} className='goTopButton'>^</button>
+
     </div>;
 }
 

@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "Inter";
+    font-family: 'Inter';
     src: url("./components/fonts/Inter-VariableFont_slnt\,wght.ttf") format("truetype");
 }
 :root{
@@ -111,6 +111,15 @@ button{
 .no{
     display: none;
 }
+.goTopButton{
+    position: fixed;
+    bottom: 20vh;
+    right: 1vw;
+    font-size: 8rem;
+}
+
+
+
 /* tablety */
 @media only screen and (max-width: 830px) {
     .content{

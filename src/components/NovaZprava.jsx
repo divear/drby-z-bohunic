@@ -11,6 +11,12 @@ function NovaZprava() {
         if (!body) {
             setErrorCode("Zpráva je povinná!");
             return
+        } else if (body.length >= 3000) {
+            setErrorCode("Zpráva je moc dlouhá")
+            return
+        } else if (username.length >= 255) {
+            setErrorCode("Přezdívka je moc dlouhá")
+            return
         }
 
 
