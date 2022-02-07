@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 function Home() {
     const serverDomain = process.env.REACT_APP_SERVERDOMAIN
     console.log(window.scrollY);
-    const [data, setData] = useState([])
+    const [data, setData] = useState([]);
 
     const [scrollPosition, setScrollPosition] = useState(0);
     const handleScroll = () => {
