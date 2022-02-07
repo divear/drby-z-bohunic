@@ -7,6 +7,7 @@ import {
 import Home from './components/Home';
 import NotFound from './components/NotFound';
 import NovaZprava from './components/NovaZprava';
+import Feedback from './components/Feedback';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <div className='content'>
         <Router>
           <Routes>
+            <Route path="/feedback" element={<Feedback />}></Route>
             <Route path="nova" element={<NovaZprava />}></Route>
             <Route exact path="/" element={<Home />}></Route>
             <Route path="*" element={<NotFound />}></Route>
