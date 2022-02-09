@@ -46,7 +46,7 @@ function Home() {
 
         <button onClick={() => window.scrollTo(0, 0)} style={{ opacity: `${scrollPosition / 10}%` }} className='goTopButton'>^</button>
         <footer>
-            <p className='floatLeft'>Made by Lukáš Odehnal</p>
+            <p className='floatLeft'>Lukáš Odehnal</p>
             <a className='floatRight' href="/feedback">feedback</a>
         </footer>
     </div>;

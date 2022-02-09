@@ -125,11 +125,14 @@ button{
 }
 .floatRight{
     float: right;
+    margin: 1rem ;
 }
 .floatLeft{
     float: left;
 }
-
+.genre{
+    margin: 1vw;
+}
 
 /* tablety */
 @media only screen and (max-width: 830px) {
