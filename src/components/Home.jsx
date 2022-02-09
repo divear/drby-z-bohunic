@@ -10,6 +10,13 @@ function Home() {
         setScrollPosition(position);
     }
 
+    const typy = {
+        0: "Jiné",
+        1: "Názor",
+        2: "Otázka",
+        3: "Přiznání"
+    }
+
 
     useEffect(() => {
         async function getBlogs() {
@@ -38,6 +45,7 @@ function Home() {
             return (
                 <div title={`Zpráva ${d.id}`} key={d.id} className="drb">
                     <h5><i>{d.username || "Anonym"}</i></h5>
+                    <h5 className='floatRight'>{typy[d.genre]}</h5>
                     <h1>{d.body}</h1>
 
                 </div>
