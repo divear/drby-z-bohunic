@@ -4,6 +4,8 @@ import searchIcon from "./imgs/search.png"
 function Home() {
     const serverDomain = process.env.REACT_APP_SERVERDOMAIN
     const [data, setData] = useState([]);
+    const [backup, setBackup] = useState([])
+    const [searchInput, setSearchInput] = useState("")
 
     const [scrollPosition, setScrollPosition] = useState(0);
     const handleScroll = () => {
@@ -25,6 +27,7 @@ function Home() {
                 const response = await fetch(serverDomain + "drby");
                 const jsonData = await response.json();
                 setData(jsonData.reverse());
+                setBackup(jsonData.reverse());
             } catch (error) {
                 console.log(error);
             }
@@ -40,8 +43,18 @@ function Home() {
 
     function search(e) {
         e.preventDefault()
-        console.log("search");
-        console.log(e);
+
+        const searched = backup.filter((d) => d.body.includes(searchInput))
+
+        console.log(searched);
+        if (!searched[0]) {
+            setData([{ body: "Nic nenalezeno" }])
+            console.log(data);
+        } else {
+            setData(searched)
+        }
+
+
     }
 
     return <div>
@@ -50,7 +63,7 @@ function Home() {
         <button className='new' onClick={() => window.location = "/nova"}>Napsat novou zprávu</button>
 
         <form onSubmit={e => search(e)} className="searchParent">
-            <input type="search" placeholder='Hledat zprávu...' className='search' />
+            <input value={searchInput} onChange={e => setSearchInput(e.target.value)} type="search" placeholder='Hledat zprávu...' className='search' />
             <button><img className='searchIcon' src={searchIcon} alt="Hledat" /></button>
         </form>
 
