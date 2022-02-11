@@ -26,7 +26,7 @@ function Home() {
             try {
                 const response = await fetch(serverDomain + "drby");
                 const jsonData = await response.json();
-                setData(jsonData.reverse());
+                setData(jsonData);
                 setBackup(jsonData.reverse());
             } catch (error) {
                 console.log(error);
