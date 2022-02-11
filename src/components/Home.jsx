@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import searchIcon from "./imgs/search.png"
 
 function Home() {
     const serverDomain = process.env.REACT_APP_SERVERDOMAIN
@@ -37,10 +38,22 @@ function Home() {
         }
     }, [])
 
+    function search(e) {
+        e.preventDefault()
+        console.log("search");
+        console.log(e);
+    }
+
     return <div>
         <title>Drby z bohunic</title>
         <h2>Nejnovější drby:</h2>
         <button className='new' onClick={() => window.location = "/nova"}>Napsat novou zprávu</button>
+
+        <form onSubmit={e => search(e)} className="searchParent">
+            <input type="search" placeholder='Hledat zprávu...' className='search' />
+            <button><img className='searchIcon' src={searchIcon} alt="Hledat" /></button>
+        </form>
+
         {data[0] ? data.map((d) => {
             return (
                 <div title={`Zpráva ${d.id}`} key={d.id} className="drb">
@@ -54,7 +67,7 @@ function Home() {
 
         <button onClick={() => window.scrollTo(0, 0)} style={{ opacity: `${scrollPosition / 10}%` }} className='goTopButton'>^</button>
         <footer>
-            <p className='floatLeft'>Lukáš Odehnal</p>
+            <p className='floatLeft'>Lukáš Odehnal 2022</p>
             <a className='floatRight' href="/feedback">feedback</a>
         </footer>
     </div>;
