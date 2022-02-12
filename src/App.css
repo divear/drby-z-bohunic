@@ -139,12 +139,10 @@ button{
 }
 .searchParent{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     margin: 5vw 0 0 0;
-}
-.searchIcon{
-    width: 2rem;
 }
 
 
@@ -181,7 +179,7 @@ button{
         width: 60vw;
     }
     .search:focus{
-        width: 80%;
+        width: 50%;
     }
 
 

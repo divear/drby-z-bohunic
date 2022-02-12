@@ -42,7 +42,7 @@ function Home() {
     }, [])
 
     function search(e) {
-        e.preventDefault()
+        setSearchInput(e.target.value)
 
         const searched = backup.filter((d) => d.body.includes(searchInput))
 
@@ -61,10 +61,9 @@ function Home() {
         <h2>Nejnovější drby:</h2>
         <button className='new' onClick={() => window.location = "/nova"}>{window.innerWidth > 830 ? "Napsat novou zprávu" : "+"}</button>
 
-        <form onSubmit={e => search(e)} className="searchParent">
-            <input value={searchInput} onChange={e => setSearchInput(e.target.value)} type="search" placeholder='Hledat zprávu...' className='search' />
-            <button><img className='searchIcon' src={searchIcon} alt="Hledat" /></button>
-        </form>
+        <div className="searchParent">
+            <input value={searchInput} onChange={e => search(e)} type="search" placeholder='Hledat zprávu...' className='search' ></input>
+        </div>
 
         {data[0] ? data.map((d) => {
             return (
