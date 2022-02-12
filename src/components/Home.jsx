@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import searchIcon from "./imgs/search.png"
 
 function Home() {
     const serverDomain = process.env.REACT_APP_SERVERDOMAIN
@@ -46,8 +45,14 @@ function Home() {
 
         const searched = backup.filter((d) => d.body.toLowerCase().includes(searchInput.toLowerCase()))
 
+
+
         if (!searched[0]) {
-            setData([{ body: "Nic nenalezeno" }])
+            setData([{
+                body: "Nic nenalezeno 😭",
+                id: 1,
+                username: " "
+            }])
         } else {
             setData(searched)
         }
@@ -57,7 +62,6 @@ function Home() {
 
     return <div>
         <title>Drby z bohunic</title>
-        <h2>Nejnovější drby:</h2>
         <button className='new' onClick={() => window.location = "/nova"}>{window.innerWidth > 830 ? "Napsat novou zprávu" : "+"}</button>
 
         <div className="searchParent">
@@ -70,7 +74,6 @@ function Home() {
                     <h5><i>{d.username || "Anonym"}</i></h5>
                     <h5 className='floatRight'>{typy[d.genre]}</h5>
                     <h1>{d.body}</h1>
-
                 </div>
             )
         }) : <h1>Načítání...</h1>}
