@@ -154,6 +154,9 @@ button{
     .new{
         font-size: 4rem;
     }
+    .goTopButton{
+        display: none;
+    }
 }
 
 
@@ -176,10 +179,10 @@ button{
         font-size: 3rem;
     }
     .search{
-        width: 60vw;
+        width: 75%;
     }
     .search:focus{
-        width: 50%;
+        width: 90%;
     }
 
 
