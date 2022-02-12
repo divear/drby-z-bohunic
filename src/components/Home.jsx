@@ -44,11 +44,10 @@ function Home() {
     function search(e) {
         setSearchInput(e.target.value)
 
-        const searched = backup.filter((d) => d.body.includes(searchInput))
+        const searched = backup.filter((d) => d.body.toLowerCase().includes(searchInput.toLowerCase()))
 
         if (!searched[0]) {
             setData([{ body: "Nic nenalezeno" }])
-            console.log(data);
         } else {
             setData(searched)
         }
