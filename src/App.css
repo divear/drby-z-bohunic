@@ -136,12 +136,12 @@ button{
 .search{
     text-align: center;
     font-size: 2rem;
-
 }
 .searchParent{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 5vw 0 0 0;
 }
 .searchIcon{
     width: 2rem;
@@ -153,11 +153,14 @@ button{
     .content{
         margin: 0 1vw;
     }
+    .new{
+        font-size: 4rem;
+    }
 }
 
 
 /* mobily */
-@media only screen and (max-width: 522px) {
+@media only screen and (max-width: 652px) {
 
     .headerText > p {
         display: none;
@@ -170,6 +173,15 @@ button{
     }
     #body{
         height: 30vh;
+    }
+    .new{
+        font-size: 3rem;
+    }
+    .search{
+        width: 60vw;
+    }
+    .search:focus{
+        width: 80%;
     }
 
 

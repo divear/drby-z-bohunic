@@ -46,7 +46,6 @@ function Home() {
 
         const searched = backup.filter((d) => d.body.includes(searchInput))
 
-        console.log(searched);
         if (!searched[0]) {
             setData([{ body: "Nic nenalezeno" }])
             console.log(data);
@@ -60,7 +59,7 @@ function Home() {
     return <div>
         <title>Drby z bohunic</title>
         <h2>Nejnovější drby:</h2>
-        <button className='new' onClick={() => window.location = "/nova"}>Napsat novou zprávu</button>
+        <button className='new' onClick={() => window.location = "/nova"}>{window.innerWidth > 830 ? "Napsat novou zprávu" : "+"}</button>
 
         <form onSubmit={e => search(e)} className="searchParent">
             <input value={searchInput} onChange={e => setSearchInput(e.target.value)} type="search" placeholder='Hledat zprávu...' className='search' />
