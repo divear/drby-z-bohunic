@@ -6,7 +6,6 @@
     --bg: #050508;
     --fr: #c8daee;
     --back: #3d4c5f;
-    --border:2px var(--fr) solid;
     --red: #E05D4F;
 }
 
@@ -32,12 +31,20 @@ button{
     float: right;
     color: var(--fr);
     font-size: 1.5rem;
-    border: var(--border);
+    border: none;
     border-radius: 0.4vw;
     cursor: pointer;
 }
 .new{
     margin: -2vw 0;
+    padding: 0.3vw;
+    border-radius: 2vw;
+}
+button:hover{
+    animation-name: lighten;
+    animation-duration: 1s;
+    background-color: hsl(214, 22%, 25%);
+
 }
 
 .header{
@@ -69,8 +76,6 @@ button{
     margin: 0 15vw;
 }
 .drb{
-    /* background-color: var(--back); */
-    border: 1px var(--back) solid;
     margin: 1vw;
     padding: 0.4vw;
     border-radius: 1vw;
@@ -78,7 +83,6 @@ button{
     color: var(--fr);
 }
 .drb:hover{
-    border: 2px var(--fr) solid;
     animation-name: lighten;
     animation-duration: 1s;
     background-color: hsl(214, 22%, 25%);
