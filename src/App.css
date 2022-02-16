@@ -152,6 +152,7 @@ button:hover{
     text-align: center;
     margin: 0;
     padding: 0;
+    opacity: 50%;
 }
 
 /* tablety */
