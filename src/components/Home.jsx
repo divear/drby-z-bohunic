@@ -69,7 +69,6 @@ function Home() {
         </div>
 
         {data[0] ? data.map((d) => {
-            console.log(d);
             return (
                 <div title={`Zpráva ${d.id}`} key={d.id} className="drb">
                     <h5 className='date'>{d.posted_date}</h5>
