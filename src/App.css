@@ -148,7 +148,11 @@ button:hover{
     justify-content: center;
     margin: 5vw 0 0 0;
 }
-
+.date{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
 
 /* tablety */
 @media only screen and (max-width: 830px) {
