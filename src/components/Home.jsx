@@ -16,7 +16,9 @@ function Home() {
         0: "Jiné",
         1: "Názor",
         2: "Otázka",
-        3: "Přiznání"
+        3: "Přiznání",
+        4: "Moudro",
+        5: "Přání"
     }
 
 

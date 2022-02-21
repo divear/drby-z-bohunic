@@ -57,6 +57,8 @@ function NovaZprava() {
                     <option value="1">Názor</option>
                     <option value="2">Otázka</option>
                     <option value="3">Přiznání</option>
+                    <option value="4">Moudro</option>
+                    <option value="5">Přání</option>
                 </select>
             </div>
 
