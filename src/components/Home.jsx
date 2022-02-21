@@ -14,12 +14,12 @@ function Home() {
 
     const typy = {
         0: "Jiné",
-        1: "Názor",
-        2: "Otázka",
-        3: "Přiznání",
-        4: "Moudro",
-        5: "Přání",
-        6: "Vtip"
+        1: "Názor💭",
+        2: "Otázka❓",
+        3: "Přiznání🗣",
+        4: "Moudro🧠",
+        5: "Přání✨",
+        6: "Vtip😂"
     }
 
 

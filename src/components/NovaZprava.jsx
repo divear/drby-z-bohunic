@@ -54,12 +54,12 @@ function NovaZprava() {
                 <label htmlFor="genre">Typ zprávy: </label>
                 <select value={genre} onChange={e => setGenre(e.target.value)} name="genre" id="genre">
                     <option value="0">Jiné</option>
-                    <option value="1">Názor</option>
-                    <option value="2">Otázka</option>
-                    <option value="3">Přiznání</option>
-                    <option value="4">Moudro</option>
-                    <option value="5">Přání</option>
-                    <option value="6">Vtip</option>
+                    <option value="1">Názor💭</option>
+                    <option value="2">Otázka❓</option>
+                    <option value="3">Přiznání🗣</option>
+                    <option value="4">Moudro🧠</option>
+                    <option value="5">Přání✨</option>
+                    <option value="6">Vtip😂</option>
                 </select>
             </div>
 
