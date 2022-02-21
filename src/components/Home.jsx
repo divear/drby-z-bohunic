@@ -18,7 +18,8 @@ function Home() {
         2: "Otázka",
         3: "Přiznání",
         4: "Moudro",
-        5: "Přání"
+        5: "Přání",
+        6: "Vtip"
     }
 
 
